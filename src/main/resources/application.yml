@@ -1,0 +1,48 @@
+server:
+  port: 8001
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/comment_sale?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8
+    username: root
+    password: 123456
+  freemarker:
+    allow-request-override: false
+    allow-session-override: false
+    cache: false
+    charset: UTF-8
+    check-template-location: true
+    content-type: text/html
+    enabled: true
+    expose-request-attributes: false
+    expose-session-attributes: false
+    expose-spring-macro-helpers: true
+    prefer-file-system-access: true
+    suffix: .ftl
+    template-loader-path: classpath:/templates/
+  resources:
+    static-locations: classpath:/resources/,classpath:/static/,classpath:/templates/
+  redis:
+    host: 192.168.58.136
+    port: 6379
+  mvc:
+    static-path-pattern: /**
+  servlet:
+    multipart:
+      max-file-size: 1MB
+
+#mybatis-plus
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+qiniu:
+  accessKey: PDK1pZ4K7kbH1kurD-C824FwY47ug_bafsB7GdBa
+  accessSecretKey: xocnFxwGAYDG5THl__1z6gmR95dgzaqNkmvym2Fr
+
+
+
+
+
+
